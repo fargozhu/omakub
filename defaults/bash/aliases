@@ -22,9 +22,10 @@ alias lzg='lazygit'
 alias lzd='lazydocker'
 
 # Git
-alias gcm='git commit -m'
-alias gcam='git commit -a -m'
+alias gc='git commit -m'
+alias gca='git commit -a -m'
 alias gcad='git commit -a --amend'
+alias gcb='git branch | fzf | cut -c 3- | xargs git checkout'
 
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
